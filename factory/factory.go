@@ -322,6 +322,9 @@ func (fa *Factory) MustCreateWithOption(opt map[string]interface{}) interface{} 
 Bind values of a new objects to a pointer to struct.
 
 ptr: a pointer to struct
+*/Bind values of a new objects to a pointer to struct.
+
+ptr: a pointer to struct
 */
 func (fa *Factory) Construct(ptr interface{}) error {
 	return fa.ConstructWithOption(ptr, nil)
@@ -332,6 +335,10 @@ Bind values of a new objects to a pointer to struct with option.
 
 ptr: a pointer to struct
 opt: attibute values
+*/Bind values of a new objects to a pointer to struct with option.
+
+ptr: a pointer to struct
+opt: attibute values
 */
 func (fa *Factory) ConstructWithOption(ptr interface{}, opt map[string]interface{}) error {
 	return fa.ConstructWithContextAndOption(context.Background(), ptr, opt)
@@ -339,6 +346,11 @@ func (fa *Factory) ConstructWithOption(ptr interface{}, opt map[string]interface
 
 /*
 Bind values of a new objects to a pointer to struct with context and option.
+
+ctx: context object
+ptr: a pointer to struct
+opt: attibute values
+*/Bind values of a new objects to a pointer to struct with context and option.
 
 ctx: context object
 ptr: a pointer to struct
